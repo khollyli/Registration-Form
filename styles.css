@@ -1,0 +1,17 @@
+body {
+    width: 100%;
+    /* vh: viewport height;
+    it's relative to 1% of the height of the viewport */
+    height: 100vh;
+    /* Get rid of horizontal scroll-bar */
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+}
+
+label {
+    display: block;
+    /* The 'rem' unit stands for root 'em',
+    and is relative to the font size of the html element */
+    margin: 0.5rem 0;
+}
