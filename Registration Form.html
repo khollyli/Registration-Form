@@ -39,8 +39,25 @@
                 </label>
             </fieldset>
             <fieldset>
-                <label>Upload a profile picture: <input type="file" /></label>
-                <label>Input your age (years) </label>
+                <label for="profile-picture">Upload a profile picture: <input type="file" id="profile-picture" /></label>
+                <label for="age">Input your age (years): <input type="number" min="13" max="120" /> </label>
+                <label for="referrer">How did you hear about us?
+                    <!-- The select element is a container for a group of option elements;
+                    the option element acts as a label for each dropdown option;
+                    both require a closing tag -->
+                    <select>
+                        <option value="">(select one)</option>
+                        <option value="1">freeCodeCamp News</option>
+                        <option value="2">freeCodeCamp YouTube</option>
+                        <option value="3">freeCodeCamp Forum</option>
+                        <option value="4">Other</option>
+                    </select>
+                </label>
+                <!-- the element 'textarea' acts like an input element of type text,
+                but comes with the added benefit of being able to receive multi-line text,
+                and an initial number of text rows and columns;
+                element requires closing tag -->
+                <label for="bio">Provide a bio:<textarea></textarea></label>
             </fieldset>
             <input type="submit" value="Submit" />
         </form>
