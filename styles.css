@@ -7,6 +7,36 @@ body {
     margin: 0;
     background-color: #1b1b32;
     color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+h1, p {
+    margin: 1em auto;
+    text-align: center;
+
+}
+
+form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: none;
+    /* To adjust only top and bottom padding, put the value of it first;
+    to adjust only the left and right padding, put the value after the first value */
+    padding: 2rem 0;
+    /* height, line-type, colour */
+    border-bottom: 3px solid #3b3b4f;
+}
+
+/* This will select the last fieldset element;
+last-of-type means last element */
+fieldset:last-of-type {
+    border-bottom: none;
 }
 
 label {
@@ -14,4 +44,13 @@ label {
     /* The 'rem' unit stands for root 'em',
     and is relative to the font size of the html element */
     margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+    /* top, right, bottom, left i think */
+    margin: 10px 0 0 0;
+    /* To make them take up the full width of their parent elements */
+    width: 100%;
 }

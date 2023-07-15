@@ -17,13 +17,13 @@
                 <input></input> -> <input /> -->
                 <!-- the 'email' type only allows emails with a '@' and a '.' in the domain;
                 the 'password' type obscures the input, and warns if the site does not use HTTPS -->
-                <label for="first-name">Enter Your First Name: <input id="first-name" type="text" required /></label>
-                <label for="last-name">Enter Your Last Name: <input id="last-name" type="text" required/></label>
-                <label for="email">Enter Your Email: <input id="email" type="email" required/></label>
+                <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+                <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required/></label>
+                <label for="email">Enter Your Email: <input id="email" name="email" type="email" required/></label>
                 <!-- the attribute 'minlength' can set a required amount of characters;
                 the value [a-z0-5]{8,} of the pattern 'attribute', requires either the password to 
                 have characters a-z and/or 0-5 with 8 characters minimum -->
-                <label for="new-password">Create a New Password: <input id="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+                <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
             </fieldset>
             <fieldset>
                 <label for="personal-account">
@@ -35,17 +35,17 @@
                     <input type="radio" name="account-type" id="business-account"/> Business Account
                 </label>
                 <label for="terms-and-conditions">
-                    <input type="checkbox" id="terms-and-conditions" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+                    <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
                 </label>
             </fieldset>
             <fieldset>
-                <label for="profile-picture">Upload a profile picture: <input type="file" id="profile-picture" /></label>
-                <label for="age">Input your age (years): <input type="number" min="13" max="120" /> </label>
+                <label for="profile-picture">Upload a profile picture: <input type="file" id="profile-picture" name="file" /></label>
+                <label for="age">Input your age (years): <input id="age" name="age" type="number" min="13" max="120" /> </label>
                 <label for="referrer">How did you hear about us?
                     <!-- The select element is a container for a group of option elements;
                     the option element acts as a label for each dropdown option;
                     both require a closing tag -->
-                    <select>
+                    <select id="referrer"  name="referrer">
                         <option value="">(select one)</option>
                         <option value="1">freeCodeCamp News</option>
                         <option value="2">freeCodeCamp YouTube</option>
@@ -57,7 +57,9 @@
                 but comes with the added benefit of being able to receive multi-line text,
                 and an initial number of text rows and columns;
                 element requires closing tag -->
-                <label for="bio">Provide a bio:<textarea></textarea></label>
+                <label for="bio">Provide a bio:
+                    <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..." ></textarea>
+                </label>
             </fieldset>
             <input type="submit" value="Submit" />
         </form>
